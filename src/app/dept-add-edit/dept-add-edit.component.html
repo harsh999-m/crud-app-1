@@ -1,0 +1,46 @@
+<div mat mat-dialog-title> 
+    <h1>Department form</h1>
+
+</div>
+<form [formGroup]="deptForm" (ngSubmit)="onFormSubmit()">
+<div mat mat-dialog-content> 
+
+  <div class="formGroup" formArrayName="Employee">
+    <mat-form-field appearance="outline">
+    <mat-label> Employees</mat-label>
+    <ng-container *ngFor="let Employee of deptForm.get('Employee').Controls; let i=index" >
+      <input matInput type="text" class="formGroup mt-2"
+      formControlName = "{{i}}"
+      placeholder="Add Employee">
+    - </ng-container>
+  </mat-form-field>
+  <button (click) ="onAddSkills()"
+  class="btn btn-light btn-sm mt-3 btn-add"><i>+</i>Add Employees</button>
+
+</div>
+    <div class="row">
+    <mat-form-field appearance="outline">
+        <mat-label> Department ID</mat-label>
+        <input matInput type="number" placeholder="123 "formControlName="ID">
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label> Department Name </mat-label>
+        <input matInput type="text" placeholder="  IT " formControlName="name">
+      </mat-form-field>
+</div>  
+  <div class="row">
+    <mat-form-field appearance="outline">
+        <mat-label> Salary</mat-label>
+        <input matInput type="number" placeholder="12345" formControlName="salary">
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Gender</mat-label>
+        <input matInput type="text" placeholder="male" formControlName="gender">
+      </mat-form-field>
+
+  </div>
+<div mat-dialog-actions class="action">  
+   <button mat-raised-button type="button" [mat-dialog-close]="false">Cancel</button>
+  <button mat-raised-button color="primary"type="submit">{{data ?'Update':'Save'}}</button>
+</div>
+

@@ -1,0 +1,92 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "employees": [
+    {
+      "ID": 22,
+      "name": "sds",
+      "department": "aassa",
+      "salary": 12121,
+      "email": "asd@g.com",
+      "DOB": "2023-05-29T18:30:00.000Z",
+      "gender": "male",
+      "id": 1
+    },
+    {
+      "ID": 345,
+      "name": "sdfgfd",
+      "department": "ssdfg",
+      "salary": 2345,
+      "email": "h@gmail.com",
+      "DOB": "2023-05-24T18:30:00.000Z",
+      "gender": "male",
+      "id": 4
+    },
+    {
+      "ID": 456,
+      "name": "ertyu",
+      "department": "fghj",
+      "salary": 45678,
+      "email": "fghjk@gmail.com",
+      "DOB": "2023-05-26T18:30:00.000Z",
+      "gender": "male",
+      "id": 5
+    }
+  ],
+  "department": [
+    {
+      "ID": 454555,
+      "name": "gbgg",
+      "salary": 432344,
+      "gender": "m",
+      "id": 10
+    },
+    {
+      "ID": 23456,
+      "name": "sdf",
+      "salary": 234567,
+      "gender": "tyu",
+      "action": "",
+      "id": 11
+    },
+    {
+      "ID": "",
+      "name": "",
+      "salary": "",
+      "gender": "",
+      "action": "",
+      "id": 12
+    },
+    {
+      "ID": "",
+      "name": "",
+      "salary": "",
+      "gender": "",
+      "action": "",
+      "id": 13
+    },
+    {
+      "ID": "",
+      "name": "",
+      "salary": "",
+      "gender": "",
+      "action": "",
+      "id": 14
+    }
+  ]
+}

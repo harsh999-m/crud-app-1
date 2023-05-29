@@ -1,0 +1,58 @@
+<div mat-dialog-title>
+    <h1>Employee form</h1>
+</div>
+<form [formGroup]="empForm"(ngSubmit)="onFormSubmit()">
+<div mat-dialog-content class="content">
+    <div class="row">
+        <mat-form-field appearance="outline">
+            <mat-label>Employee ID</mat-label>
+            <input matInput type="number" placeholder="1" formControlName="ID">
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>Employee Name</mat-label>
+            <input matInput type="text" placeholder="Harsh" formControlName="name">
+          </mat-form-field>
+    </div>
+          <div class="row">
+
+          <mat-form-field appearance="outline">
+            <mat-label>Employee Department</mat-label>
+            <input matInput type="text" placeholder="IT" formControlName="department">
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>Employee Salary</mat-label>
+            <input matInput type="number" placeholder="20000" formControlName="salary">
+          </mat-form-field>
+     </div>
+     <div class="row">
+
+          <mat-form-field appearance="outline">
+            <mat-label>Employee Email</mat-label>
+            <input matInput type="email" placeholder="happymittal7690@gmail.com" formControlName="email" pattern="[a-zA-Z0-9._-]*@[a-zA-Z]*\.[a-zA-Z]{2,3}">
+            
+          </mat-form-field>
+      
+          <mat-form-field appearance="outline">
+            <mat-label>Date of Birth</mat-label>
+            <input matInput [matDatepicker]="picker" formControlName="DOB">
+            <mat-hint>MM/DD/YYYY</mat-hint>
+            <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+        </div>
+
+        <div class="row">
+            <mat-radio-group aria-label="Select an option" formControlName="gender">
+                <mat-label><b>Gender</b></mat-label>
+                <mat-radio-button value="male">male</mat-radio-button>
+                <mat-radio-button value="female">female</mat-radio-button>
+                <mat-radio-button value="others">others</mat-radio-button>
+
+              </mat-radio-group>
+        </div>
+</div>
+<div mat-dialog-actions class="action">
+<button mat-raised-button type="button" [mat-dialog-close]="false">Cancel</button>
+<button mat-raised-button color="primary" type="submit">{{data ?'Update':'Save'}}</button>
+</div>
+</form> 
